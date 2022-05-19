@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Mobile Showmanship Page</title>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="../../js/ios-orientationchange-fix.min.js"></script>
+<style>
+.wrapper {overflow:auto;}
+
+#main {margin-left: 2px;}
+#leftsidebar {float: none;width: auto;}
+#menulist {margin:0;padding:1px;
+           }
+
+.menuitem {
+    background:#CDF0F6;
+    border:1px solid #000000;
+    border-radius:4px;
+    list-style-type:none;
+    margin:4px;
+    padding:2px;
+    text-align: center;
+   }
+
+img{
+     width: auto;
+     max-width: 100%;
+   }
+   
+
+
+@media only screen and (min-width: 480px) {
+    #leftsidebar {width:160px;float:left;}
+    #main {margin-left:216px;}
+}
+
+footer {font-size: 70%;
+        text-align: center;}
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+ <h1 > Know Your Rabbits</h1>
+</header>
+<div="wrapper">
+ <div id="leftsidebar">
+   <ul id="menulist">
+ 
+
+  <li class="menuitem"><a href="mobile_index.html">Home</a> </li>
+  <li class="menuitem"><a href="mobile_breeds.html"> Breeds</a></li>
+  <li class="menuitem"> <a href="mobile_anatomy.html">Anatomy </a></li>
+  <li class="menuitem"><a href="mobile_showmanship.html">Showmanship</a></li>
+  <li class="menuitem"> <a href="mobile_contact.html">More Info</a></li>
+
+</ul>
+</div>
+ <div id="main">
+
+ <h2><strong>Rabbit Showmanship</strong></h2>
+
+<p> Each rabbit breed has a standard of perfection. It is by this
+    standard that your individual rabbit is judged.</p>
+
+<p> 
+   There is a prescribed routine for showing a rabbit.You start
+   at the head and end at the tail.<br>
+ <p style="font-size: .90em"> Look at these parts for problems:
+    <i> (The red squares are the areas you check.)</i>
+ </p>
+
+  
+     <div>   
+     <!-- <img src="images/showmanshipRabbitt.jpg" alt="rabbit on back"> -->
+        
+      <img src="images/showmanshipRabbitt.jpg" usemap="#image-map">
+     <div>
+
+  
+
+<map name="image-map">
+    <area target="_blank" alt="ear" title="ear" href="" coords="65,45,15" shape="circle">         
+    <area target="_blank" alt="ear" title="ear" href="" coords="96,21,16" shape="circle"> 
+    <area target="_blank" alt="eye" title="eye" href="" coords="95,66,15" shape="circle">
+    <area target="_blank" alt="nose" title="nose" href="" coords="131,76,13" shape="circle">
+    <area target="_blank" alt="mouth" title="mouth" href="" coords="136,96,9" shape="circle">
+    <area target="_blank" alt="neck" title="neck" href="" coords="89,99,17" shape="circle">
+    <area target="_blank" alt="paw" title="nails" href="" coords="93,130,9" shape="circle">
+    <area target="_blank" alt="paw" title="paw" href="" coords="172,99,13" shape="circle">
+    <area target="_blank" alt="chest" title="chest" href="" coords="132,141,13" shape="circle">
+    <area target="_blank" alt="toe nails" title="toe nails" href="" coords="95,220,12" shape="circle">
+    <area target="_blank" alt="hock" title="hock" href="" coords="135,250,15" shape="circle">
+    <area target="_blank" alt="tail" title="tail" href="" coords="82,268,12" shape="circle">
+    <area target="_blank" alt="foot pad" title="foot pad" href="" coords="46,241,14" shape="circle">
+    <area target="_blank" alt="sex" title="sex" href="" coords="72,237,10" shape="circle">
+</map>
+
+<!--
+
+   <ul>
+   <li> Ears </li>
+   <li> Eyes </li>
+   <li> nose </li>
+   <li> mouth </li>
+   <li> neck </li>
+   <li> front legs </li>
+   <li> stomach </li>
+   <li> back toes </li>
+   <li> foot pads </li>
+   <li>hocks </li>
+   <li> check sex of rabbit </li>
+   <li>tail </li>
+
+</ul>
+ <p>
+   
+   Look for discolorations in the fur. The <strong> hand</strong> points
+   to an example.
+ </p> 
+ -->
+ 
+<div>
+<footer>
+<i> Copyright &copy; 2022 Clover69 </i>
+</footer>
+
+</div> <!--end div for footer -->
+</div> <!-- end of wrapper -->
+
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.rwdImageMaps.min.js"></script>
+   <script>
+      $(document).ready(function(e) {
+       $('img[usemap]').rwdImageMaps();
+
+       $('area').on('click',function() {
+          alert($(this).attr('alt') + 'clicked');
+      });
+   });
+   </script>
+
+
+</body>
+</html>
+
+
