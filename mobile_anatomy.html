@@ -1,5 +1,5 @@
  <!DOCTYPE html>
-<!-- April 27, 2022 -->
+<!-- May 26, 2022 -->
 <html lang="en">
 <head>
 <title>Mobile Anatomy Page</title>
@@ -9,6 +9,132 @@
 <!--<script src="script/jquery-3.6.0.min.js'> </script> -->
 <script src="../../js/ios-orientationchange-fix.min.js"></script>
 <style type="text/css">
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+
+	        crossorigin="anonymous">
+	</script>
+	<script src="js/jquery.hotspot.js"></script>
+
+
+
+
+
+/* <a href="https://www.jqueryscript.net/animation/">Animation</a> */
+
+	@-webkit-keyframes
+	pulsate {  0% {
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	 opacity: 0.8;
+	}
+         45% {
+	 -webkit-transform: scale(1.75);
+	 transform: scale(1.75);
+	 opacity: 0;
+	}
+
+	}
+       @keyframes
+	pulsate {  0% {
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	 opacity: 0.8;
+	}
+
+	 45% {
+	 -webkit-transform: scale(1.75);
+	 transform: scale(1.75);
+	 opacity: 0;
+	}
+     }
+
+     /* Hotspot */
+
+	#hotspotImg {
+	  background-color: #ededed;
+	  background-size: cover;
+	  background-position: center center;
+	  position: relative;
+
+	}
+
+      #hotspotImg .img-responsive { max-width: 100%; }
+
+	 
+
+	#hotspotImg .hot-spot {
+	  position: absolute;
+	  width: 15px;
+	  height: 15px;
+	  top: 60px;
+	  left: 100px;
+	  text-align: center;
+	  background-color: rgba(229, 0, 137, 0.6);
+	  color: #fff;
+	  border-radius: 100%;
+	  cursor: pointer;
+	  transition: all .3s ease;
+	}
+
+   #hotspotImg .hot-spot .circle {
+	  display: block;
+	  position: absolute;
+	  top: 45%;
+          left: 45%;
+	  width: 2em;
+	  height: 2em;
+	  margin: -1em auto auto -1em;
+	  -webkit-transform-origin: 50% 50%;
+	  transform-origin: 50% 50%;
+	  border-radius: 50%;
+	  border: 1px solid #E5008A;
+	  opacity: 0;
+	  -webkit-animation: pulsate 3s ease-out infinite;
+	  animation: pulsate 3s ease-out infinite;
+	}
+
+    #hotspotImg .hot-spot .tooltip {
+	  background-color: rgba(58, 95, 150, 0.7);
+	  -webkit-border-radius: 5px;
+	  -moz-border-radius: 5px;
+	  border-radius: 5px;
+	  color: #fff;
+	  display: none;
+	  font-size: 14px;
+	  opacity: 1.0;
+	  left: 0px;
+	  padding: 15px 5px;
+	  position: absolute;
+	  text-align: left;
+	  top: 30px;
+	  width: 280px;
+	  z-index: 999;
+	}
+
+      #hotspotImg .hot-spot .tooltip .img-row {
+	  padding: 10px;
+	  text-align: center;
+	}
+
+
+	#hotspotImg .hot-spot .tooltip .text-row { padding: 15px; }
+ 
+
+	#hotspotImg .hot-spot .tooltip h4 {
+	  margin-bottom: 10px;
+	  border-bottom: 1px solid #ffffff;
+	}
+
+     #hotspotImg .hot-spot .tooltip p {
+	  font-size: 14px;
+	  line-height: 1.4em;
+	  margin-bottom: 10px;
+	}
+
+	#hotspotImg .hot-spot .tooltip p:last-child { margin-bottom: 0; }
+
 
 .wrapper {overflow:auto;}
 
@@ -59,7 +185,7 @@ footer { font-size: 70%;
 
  
 
- <li class="menuitem"><a href="index.html">Home</a> </li>
+ <li class="menuitem"><a href="mobile_index.html">Home</a> </li>
  <li class="menuitem"><a href="mobile_breeds.html"> Breeds</a> </li>
  <li class="menuitem"> <a href="mobile_anatomy.html">Anatomy </a></li> 
  <li class="menuitem"> <a href="mobile_showmanship.html">Showmanship</a> </li>
@@ -77,8 +203,10 @@ footer { font-size: 70%;
  <div >
  <!--<img class="floatright" src="images/bunnyparts.jpg" alt="Rabbit Anatomy Picture" height="225"
   width="320"> -->
- <img src="images/bunnypartsCopy.jpg" usemap="#image-map">
+ <!--<img src="images/bunnypartsCopy.jpg" usemap="#image-map">
    </div>
+ -->
+<!--
 <map name="image-map">
     <area target="_blank" alt="ears" title="ears" href="" coords="106,76,79,69" shape="rect">
     <area target="_blank" alt="eye" title="eye" href="" coords="68,133,50,143" shape="rect">
@@ -103,26 +231,54 @@ footer { font-size: 70%;
 </map>
 
 
-
-
- 
- <!--
- <ol type="A">
-
-  <li><b>dewlap </b></li>
-  <li><b>rib </b></li>
-  <li><b>knee/stifle</b> </li>
-  <li><b> hock</b> </li>
-   <li> <b>leg</b></li>
-  <li><b>foot</b> </li>
-  <li><b>mid section</b> </li>
-  <li><b>hindquarter</b></li>
-  <li><b>forequarter</b></li>
-  <li><b>loin</b></li>
-  <li><b> saddle</b></li>
- </ol>
-
 -->
+
+ <div id="hotspotImg" class="responsive-hotspot-wrap">
+
+	    <img src="images/bunnypartsCopy.jpg" class="img-responsive">
+
+	    <div class="hot-spot" x="106" y="65">
+	      <div class="circle"></div>
+	      <div class="tooltip">
+	        <div class="img-row">
+	            <img src="1.jpg">
+	        </div>
+	        <div class="text-row">
+	          <h4>Ears</h4>
+	          <p>Ears</p>
+	        </div>
+	      </div>
+	    </div>
+
+	 
+
+	    <div class="hot-spot" x="60" y="138">
+
+	      <div class="circle"></div>
+
+	      <div class="tooltip">
+
+	        <div class="img-row">
+
+	            <img src="2.jpg">
+
+	        </div>
+
+	        <div class="text-row">
+
+	          <h4>Title 2</h4>
+
+	          <p>More Description</p>
+
+	        </div>
+
+	      </div>
+
+	    </div>
+	 
+
+  	</div>
+ 
 
 
 <footer>
@@ -133,14 +289,29 @@ footer { font-size: 70%;
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="jquery.rwdImageMaps.min.js"></script>
+<!--
    <script>
       $(document).ready(function(e) {
        $('img[usemap]').rwdImageMaps();
 
        $('area').on('click',function() {
-          alert($(this).attr('alt') + 'clicked');
+         $('#hotspotImg').hotSpot();
+       }
+
       });
-   });
+ 
+   </script>
+-->
+
+<script>
+      $(document).ready(function() {
+
+     if $($('#hotspotImg').length > 0) {
+         $('#hotspotImg').hotSpot();
+      }
+       
+      });
+  
    </script>
 
 
