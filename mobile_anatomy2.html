@@ -1,0 +1,149 @@
+ <!DOCTYPE html>
+<!-- April 27, 2022 -->
+<html lang="en">
+<head>
+<title>Mobile Anatomy Page</title>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<script src="script/jquery-3.6.0.min.js'> </script> -->
+<script src="../../js/ios-orientationchange-fix.min.js"></script>
+<style type="text/css">
+
+.wrapper {overflow:auto;}
+
+#main {margin-left: 2px;}
+#leftsidebar {float: none;width: auto;}
+#menulist {margin:0;padding:1px;
+           }
+.menuitem {
+    background:#CDF0F6;
+    border:1px solid #000000;
+    border-radius:4px;
+    list-style-type:none;
+    margin:4px;
+    padding:2px;
+    text-align: center;
+   }
+
+  img{
+     width: auto;
+     max-width: 100%;
+   }
+   
+
+ @media only screen and (min-width: 480px) {
+    #leftsidebar {width:160px;float:left;}
+    #main {margin-left:216px;}
+}
+  
+
+footer { font-size: 70%;
+         text-align: center;
+         }
+
+  
+</style>
+
+
+</head>
+<body>
+
+
+<header>
+ <h1> Know Your Rabbits</h1>
+</header>
+<div id="wrapper">
+ <div id="leftsidebar">
+   <ul id="menulist">
+
+ 
+
+ <li class="menuitem"><a href="index.html">Home</a> </li>
+ <li class="menuitem"><a href="mobile_breeds.html"> Breeds</a> </li>
+ <li class="menuitem"> <a href="mobile_anatomy.html">Anatomy </a></li> 
+ <li class="menuitem"> <a href="mobile_showmanship.html">Showmanship</a> </li>
+ <li class="menuitem" ><a href="mobile_contact.html">More Info</a></li>
+
+ </ul>
+ </div>
+<div id="main">
+
+<h2> Rabbit Anatomy </h2>
+<p>  Tap on the image to see the part:</p> 
+ 
+
+
+ <div >
+ <!--<img class="floatright" src="images/bunnyparts.jpg" alt="Rabbit Anatomy Picture" height="225"
+  width="320"> -->
+ <img src="images/bunnypartsCopy.jpg" usemap="#image-map">
+   </div>
+<map name="image-map">
+    <area target="_blank" alt="ears" title="ears" href="" coords="106,76,79,69" shape="rect">
+    <area target="_blank" alt="eye" title="eye" href="" coords="68,133,50,143" shape="rect">
+    <area target="_blank" alt="dewlap" title="dewlap" href="" coords="47,208,61,200" shape="rect">
+    <area target="_blank" alt="neck" title="neck" href="" coords="115,181,86,162" shape="rect">
+    <area target="_blank" alt="chest" title="chest" href="" coords="75,218,93,232" shape="rect">
+    <area target="_blank" alt="toe" title="toe" href="" coords="63,248,52,263" shape="rect">
+    <area target="_blank" alt="foot" title="foot" href="" coords="73,252,83,262" shape="rect">
+    <area target="_blank" alt="shoulder" title="shoulder" href="" coords="162,158,136,181" shape="rect">
+    <area target="_blank" alt="rib" title="rib" href="" coords="168,200,178,213" shape="rect">
+    <area target="_blank" alt="hindleg" title="hindleg" href="" coords="276,270,334,253" shape="rect">
+    <area target="_blank" alt="hock" title="hock" href="" coords="359,247,375,256" shape="rect">
+    <area target="_blank" alt="knee/stifle" title="knee/stifle" href="" coords="290,222,313,216" shape="rect">
+    <area target="_blank" alt="mid  section" title="mid  section" href="" coords="270,188,311,193" shape="rect">
+    <area target="_blank" alt="hip" title="hip" href="" coords="323,178,337,190" shape="rect">
+    <area target="_blank" alt="rump" title="rump" href="" coords="361,173,374,181" shape="rect">
+    <area target="_blank" alt="hindquarter" title="hindquarter" href="" coords="338,96,372,105,367,107,372,105" shape="rect">
+    <area target="_blank" alt="forequarter" title="forequarter" href="" coords="195,97,244,109" shape="rect">
+    <area target="_blank" alt="loin" title="loin" href="" coords="229,78,287,70" shape="rect">
+    <area target="_blank" alt="saddle" title="saddle" href="" coords="257,51,349,40" shape="rect">
+    <area target="_blank" alt="muzzle" title="muzzle" href="" coords="9,156,26,188" shape="rect">
+</map>
+
+
+
+
+ 
+ <!--
+ <ol type="A">
+
+  <li><b>dewlap </b></li>
+  <li><b>rib </b></li>
+  <li><b>knee/stifle</b> </li>
+  <li><b> hock</b> </li>
+   <li> <b>leg</b></li>
+  <li><b>foot</b> </li>
+  <li><b>mid section</b> </li>
+  <li><b>hindquarter</b></li>
+  <li><b>forequarter</b></li>
+  <li><b>loin</b></li>
+  <li><b> saddle</b></li>
+ </ol>
+
+-->
+
+
+<footer>
+<i> Copyright &copy; 2022 Clover69 </i>
+</footer>
+</div> <!-- end of wrapper -->
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.rwdImageMaps.min.js"></script>
+   <script>
+      $(document).ready(function(e) {
+       $('img[usemap]').rwdImageMaps();
+
+       $('area').on('click',function() {
+          alert($(this).attr('alt') + 'clicked');
+      });
+   });
+   </script>
+
+
+
+</body>
+</html>
